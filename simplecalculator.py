@@ -1,4 +1,4 @@
-import parser
+from simpleeval import simple_eval 
 from tkinter import *
 
 root = Tk()
@@ -83,36 +83,12 @@ def undo():
 def equals():
         entire_string = inputfield.get()
         try:
-                a = parser.expr(entire_string).compile()
-                result = eval(a)
+                result = simple_eval(entire_string)
                 clear_all()
                 inputfield.insert(0, result)
         except Exception:
                 clear_all()
                 inputfield.insert(0, "Error")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
