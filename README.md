@@ -1,29 +1,36 @@
-# calculator
-a simple calculator
+# Calculator
+A simple calculator built with Python. 
 
-**#modules used:**
-This is a calculator was made using the **tkinter module, and the parser module.** It also made use of global expressions in defining the functions.
-from the tkinter module, the Button function was used to create the buttons, and they were arranged by the grid method.
-the Entry function also arranged by the grid method, was used to create the entry frame where the numbers appears
+## Modules used:
+This calculator was created using the **Tkinter** module for the user interface and the **SimpleEval** module for safely evaluating mathematical expressions.  
+- **Tkinter** is used to create the buttons, input field, and overall layout.  
+- **SimpleEval** is used inside the calculator’s logic to evaluate the expressions entered by the user. This makes the evaluation process both safe and reliable.  
 
-**#defined functions:**
-five functions were defined to help the buttons work: 
-**a_var(num):** this function takes one arguement, a number. So that when the button in which the command for the function is given, it pops upon the entry field
-**the_operation(operation):** this also takes one arguement, but this time the arithmetic sign, or the decimal point. if either button is clicked, it displays whats on the button.
-**clear_all():** takes no arguement,and wipes every thing on screen when called.
-**undo():** takes no arguement, and also erases what is present on the screen from the right whenever it is called
-**equals():** this calculates the whole expression in the entry field, and returns the answer.
+## Defined functions:
+The calculator uses a few helper functions to make the buttons work: 
+- **`a_var(num)`**: Takes a number as input and inserts it into the entry field.  
+- **`the_operations(operation)`**: Takes an arithmetic symbol (like `+`, `-`, `*`, `/`, or `.`) and inserts it into the entry field.  
+- **`clear_all()`**: Clears everything in the entry field.  
+- **`undo()`**: Works like backspace—removes the last character in the entry field.  
+- **`equals()`**: Uses `simple_eval` from the SimpleEval module to evaluate the entire expression entered in the field and displays the result.  
 
-**#how the functions were used:**
-the numbers uses the **a_var(num)** function
-the signs use the **the_operations(operation)** function
-the clear all and backspace buttons use the **clear_all()** and **undo()** function respectively
-and the equals button uses the **equals()** function.
+## How the Functions are used:
+- Number buttons call the **`a_var(num)`** function.  
+- Operation buttons call the **`the_operations(operation)`** function.  
+- The clear and backspace buttons call **`clear_all()`** and **`undo()`**.  
+- The equals button calls **`equals()`**, which evaluates the expression using SimpleEval.    
 
-**#layout:**
-It consisting of a screen, numbers, undo buttons and the basic arithimetic functions.
-**+** for addition,
-**-** for subtraction,
-**/** for division,
-**x** for multiplication,
-**=** to calculate the code on the screen.
+## Layout:
+The calculator includes:  
+- A display screen for entering numbers and expressions.  
+- Buttons for numbers (`0–9`) and basic arithmetic operations (`+`, `-`, `*`, `/`, `.`).  
+- Special buttons: **Clear**, **Backspace**, and **Equals (`=`)**.  
+
+## Improvements: 
+- The project previously used the deprecated **parser** module for evaluating expressions. It has now been updated to use **SimpleEval**, which is safer and actively maintained.
+
+## Requirements  
+All dependencies are listed in **`requirements.txt`**. Install them with:  
+
+```bash
+pip install -r requirements.txt
